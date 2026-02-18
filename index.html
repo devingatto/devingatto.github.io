@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio Homepage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f3f5f7;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    nav {
+      background-color: #34495e;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      padding: 1em 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #2c3e50;
+    }
+
+    .projects img {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1a242f;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 id="welcome-message">Welcome to My Portfolio</h1>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I’m a passionate Linux systems administrator and networking student from Richmond, VA. 
+         I love solving complex problems, building efficient shell scripts, and learning about system automation. 
+         This site showcases a few of my projects and provides an easy way to get in touch.</p>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <p>Explore some of my work below. These link to my GitHub repositories:</p>
+      <a href="https://github.com/example/project1" target="_blank"><img src="https://via.placeholder.com/200" alt="Project 1"></a>
+      <a href="https://github.com/example/project2" target="_blank"><img src="https://via.placeholder.com/200" alt="Project 2"></a>
+      <a href="https://github.com/example/project3" target="_blank"><img src="https://via.placeholder.com/200" alt="Project 3"></a>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    const userName = prompt("Hi there! What’s your name?");
+    if (userName) {
+      document.getElementById("welcome-message").textContent = `Welcome, ${userName}! Glad you're here.`;
+    }
+  </script>
+</body>
+</html>
